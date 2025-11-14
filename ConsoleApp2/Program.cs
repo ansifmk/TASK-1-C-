@@ -159,4 +159,180 @@ public class Class1
 
     //    }
     //}
+
+
+    //task 2 scnd page - 1qst
+
+    //static void Main(string[] args)
+    //{
+    //    int rows = 5;
+    //    int space = rows - 1;
+
+    //    for (int i = 1; i <= rows; i++)
+    //    {
+    //        for (int j = 1; j <= space; j++)
+    //        {
+    //            Console.Write(" ");
+    //        }
+    //        for (int k = 1; k <= (2 * i - 1); k++)
+    //        {
+    //            Console.Write("*");
+    //        }
+    //        Console.WriteLine();
+    //        space--;
+    //    }
+    //}
+
+
+    //task 2 scnd page - 2qst
+
+    //static void Main(string[] args)
+    //{
+    //    int n = 5;
+
+    //    for (int i = n; i >= 1; i--)
+    //    {
+    //        for (int j = i; j < n; j++)
+    //        {
+    //            Console.Write(" ");
+    //        }
+
+    //        for (int j = 1; j <= (2 * i - 1); j++)
+    //        {
+    //            if (i == n || j == 1 || j == (2 * i - 1))
+    //            {
+    //                Console.Write("*");
+    //            }
+    //            else
+    //            {
+    //                Console.Write(" ");
+    //            }
+    //        }
+
+    //        Console.WriteLine();
+    //    }
+    //}
+
+
+
+
+    //task 2 scnd page - 3qst
+    //static void Main(string[] args)
+    //{
+    //    for (int i=0; i < 5; i++) { 
+    //    char ch = 'A';
+    //        for (int j=0; j <= i; j++)
+    //        {
+    //            Console.Write(ch + " ");
+    //            ch++;
+    //        }
+    //        Console.WriteLine();
+    //    }
+    //}
+
+
+    //task 2 scnd page - 4qst
+
+    //static void Main(string[] args)
+    //{
+    //    int num = 1;
+
+    //    for (int i = 1; i <= 4; i++)
+    //    {
+    //        for (int j = 1; j <= i; j++)
+    //        {
+    //            Console.Write(num + " ");
+    //            num++;
+    //            if (num > 9) { 
+    //                num = 1;
+    //            }
+    //        }
+    //        Console.WriteLine();
+    //    }
+    //}
+
+
+
+    //task 2 scnd page - 5qst
+
+    //static void Main(string[] args)
+    //{
+    //    int rows = 5;
+    //    for (int i = 1; i <= rows; i++) { 
+    //    for(int s = 1; s <= rows - i; s++)
+    //        {
+    //            Console.Write(" ");
+    //        }
+    //    for (int num = 1; num <= (2 * i - 1); num++)
+    //        {
+    //            Console.Write(num);
+    //        }
+    //    Console.WriteLine();
+    //    }
+    //}
+
+
+
+
+
+
+    // task day 2 prime number
+    //static void Main(string[] args)
+    //{
+    //    {
+    //        Console.Write("Enter a number: ");
+    //        int num = int.Parse(Console.ReadLine());
+
+    //        bool isPrime = true;
+
+    //        if (num <= 1)
+    //        {
+    //            isPrime = false;
+    //        }
+    //        else
+    //        {
+    //            for (int i = 2; i <= num / 2; i++)
+    //            {
+    //                if (num % i == 0)
+    //                {
+    //                    isPrime = false;
+    //                    break;
+    //                }
+    //            }
+    //        }
+
+    //        if (isPrime)
+    //            Console.WriteLine(num + " is a Prime Number");
+    //        else
+    //            Console.WriteLine(num + " is NOT a Prime Number");
+    //    }
+    //}
+
+
+
+
+    //task day 2 - pattern qst 1
+    static void Main(string[] args)
+    {
+        int n = 4;
+
+        for(int i = 1; i < n; i++)
+        {
+            for(int j=i; j < n; j++)
+            
+                Console.Write(" ");
+            for(int j=1; j<=(2*i-1);j++)
+                Console.Write("*");
+
+            Console.WriteLine();
+        }
+        for(int i=n-1; i>=1; i--)
+        {
+            for(int j=i; j < n; j++)
+                Console.Write(" ");
+            for(int j=1; j<=(2*i-1);j++)
+                Console.Write("*");
+            Console.WriteLine();
+        }
+    }
 }
