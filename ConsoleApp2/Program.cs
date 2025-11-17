@@ -338,58 +338,126 @@ public class Class1
 
 
 
-    class Animal
+    //class Animal
+    //{
+    //    public string name;
+    //    public int age;
+
+    //    public Animal(string name, int age)
+    //    {
+    //        this.name = name;
+    //        this.age = age;
+    //    }
+
+    //    public void Speak()
+    //    {
+    //        Console.WriteLine($"My name is {name} and I am {age} years old.");
+    //    }
+    //}
+
+    //class Dog : Animal
+    //{
+    //    public string breed;
+
+    //    public Dog(string name, int age, string breed) : base(name, age)
+    //    {
+    //        this.breed = breed;
+    //    }
+    //}
+
+    //class Cat : Animal
+    //{
+    //    public Cat(string name, int age) : base(name, age)
+    //    {
+    //    }
+
+    //    public void Meow()
+    //    {
+    //        Console.WriteLine("Meow!");
+    //    }
+    //}
+
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Dog dog = new Dog("Rocky", 3, "Labrador");
+    //        Cat cat = new Cat("Kitty", 2);
+
+    //        dog.Speak();
+    //        cat.Speak();
+    //        cat.Meow();
+
+    //        Console.ReadLine();
+    //    }
+    //}
+
+
+interface IShape
+{
+        double GetArea();   // Method to calculate area
+}
+
+class Circle : IShape
+{
+    public double Radius;
+
+    public Circle(double radius)
     {
-        public string name;
-        public int age;
-
-        public Animal(string name, int age)
-        {
-            this.name = name;
-            this.age = age;
-        }
-
-        public void Speak()
-        {
-            Console.WriteLine($"My name is {name} and I am {age} years old.");
-        }
+        Radius = radius;
     }
 
-    class Dog : Animal
+    public double GetArea()
     {
-        public string breed;
+        return 3.14 * Radius * Radius;
+    }
+}
 
-        public Dog(string name, int age, string breed) : base(name, age)
-        {
-            this.breed = breed;
-        }
+class Rectangle : IShape
+{
+    public double Width;
+    public double Height;
+
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
     }
 
-    class Cat : Animal
+    public double GetArea()
     {
-        public Cat(string name, int age) : base(name, age)
-        {
-        }
+        return Width * Height;
+    }
+}
 
-        public void Meow()
-        {
-            Console.WriteLine("Meow!");
-        }
+class Square : IShape
+{
+    public double Side;
+
+    public Square(double side)
+    {
+        Side = side;
     }
 
-    class Program
+    public double GetArea()
     {
-        static void Main(string[] args)
-        {
-            Dog dog = new Dog("Rocky", 3, "Labrador");
-            Cat cat = new Cat("Kitty", 2);
-
-            dog.Speak();
-            cat.Speak();
-            cat.Meow();
-
-            Console.ReadLine();
-        }
+        return Side * Side;
     }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IShape circle = new Circle(5);
+        IShape rectangle = new Rectangle(4, 6);
+        IShape square = new Square(4);
+
+        Console.WriteLine("Circle Area: " + circle.GetArea());
+        Console.WriteLine("Rectangle Area: " + rectangle.GetArea());
+        Console.WriteLine("Square Area: " + square.GetArea());
+    }
+}
+
 }
 
