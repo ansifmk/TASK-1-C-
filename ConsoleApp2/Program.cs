@@ -312,27 +312,84 @@ public class Class1
 
 
     //task day 2 - pattern qst 1
-    static void Main(string[] args)
+    //static void Main(string[] args)
+    //{
+    //    int n = 4;
+
+    //    for(int i = 1; i < n; i++)
+    //    {
+    //        for(int j=i; j < n; j++)
+
+    //            Console.Write(" ");
+    //        for(int j=1; j<=(2*i-1);j++)
+    //            Console.Write("*");
+
+    //        Console.WriteLine();
+    //    }
+    //    for(int i=n-1; i>=1; i--)
+    //    {
+    //        for(int j=i; j < n; j++)
+    //            Console.Write(" ");
+    //        for(int j=1; j<=(2*i-1);j++)
+    //            Console.Write("*");
+    //        Console.WriteLine();
+    //    }
+    //}
+
+
+
+    class Animal
     {
-        int n = 4;
+        public string name;
+        public int age;
 
-        for(int i = 1; i < n; i++)
+        public Animal(string name, int age)
         {
-            for(int j=i; j < n; j++)
-            
-                Console.Write(" ");
-            for(int j=1; j<=(2*i-1);j++)
-                Console.Write("*");
-
-            Console.WriteLine();
+            this.name = name;
+            this.age = age;
         }
-        for(int i=n-1; i>=1; i--)
+
+        public void Speak()
         {
-            for(int j=i; j < n; j++)
-                Console.Write(" ");
-            for(int j=1; j<=(2*i-1);j++)
-                Console.Write("*");
-            Console.WriteLine();
+            Console.WriteLine($"My name is {name} and I am {age} years old.");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public string breed;
+
+        public Dog(string name, int age, string breed) : base(name, age)
+        {
+            this.breed = breed;
+        }
+    }
+
+    class Cat : Animal
+    {
+        public Cat(string name, int age) : base(name, age)
+        {
+        }
+
+        public void Meow()
+        {
+            Console.WriteLine("Meow!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dog dog = new Dog("Rocky", 3, "Labrador");
+            Cat cat = new Cat("Kitty", 2);
+
+            dog.Speak();
+            cat.Speak();
+            cat.Meow();
+
+            Console.ReadLine();
         }
     }
 }
+
